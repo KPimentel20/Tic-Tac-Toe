@@ -19,6 +19,16 @@ html, body{
     grid-template-columns: repeat(3,auto);
 }
 
+/* Handle a player clicking on a square:
+HTML table to go along with css grid (styling)--
+Give classes to each row and column (obtain the class of which column and which row was clicked on when a player clicks on a cell)--
+If the winner is not null (as in has a value) immediately return bc the game has a winner
+When a player clicks on a cell you gotta update the who’s turn is it variable (switch it)
+Set the winner variable to the player who won (got three in a row/column)
+Check if its a tie if there is no winner
+If there is a tie then send the message (could update the winner message when its a tie) */
+
+
 #game {
     position: absolute;
     top: 50%;

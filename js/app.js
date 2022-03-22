@@ -1,4 +1,12 @@
 /*----- constants -----*/
+// Variables to keep track of the state of the game:
+// Who’s turn is it (string + 1, 2)--
+// The winner (3 ‘string’ options) => player1, player2, & tie.--
+// Winner message definitely needs to pop up once: either when there is 3 in a row of one icon or when the board is full 
+
+// Required constraints:
+// Player one (objects with key value pairs: the keys (“icons”))--
+// Player two–
 
 let player1 = 'bunnyicon';
 let player2 = 'thirdeyeicon';
@@ -15,6 +23,10 @@ const start = {
         score: 0
     }
 };
+// Elements to access more than once in JS:
+// Cells of the grid of the gameboard—
+// Checking if there is a winner or a loser
+// Player “names aka 1, & 2” for => who’s turn is it & for winner message–
 
 const winnerPattern = [
     //rows//
@@ -41,8 +53,21 @@ let tableEl = document.querySelector('table').addEventListener('click', handleMo
 // initialize to make the game your viewpoint at the beginning//
 // function initliaze()
 
+// Initializing the state variables:
+// Grid, the players, their icons, replay, —
+// Upon loading, the winner variable should be initialized to null
+// Who’s turn is it variable => randomize it
+// Render (view) winner = null
+
+
 // whos turn is it is set initially to player 1//
 let whosTurnIsIt = player1
+
+// Render these state variables to the page:
+// Grid–
+// Who’s turn is it–
+// Render a winner message if there is a winner
+
 
 //reason why theres no parameters is bc argument happens inside code block + there is no argument//
 //call/invoke alternateTurns when a player places an icon//
@@ -54,6 +79,15 @@ function alternateTurns(){
         whosTurnIsIt = player1
     }
     };
+
+
+    // Invoke main render function:
+    // Updating the status of who’s turn it is
+    // When the game is over
+    // Handle player clicking on the replay button
+    // When you are resetting the game (re-initialize state variables)
+    // Render those variables to the page
+    
 
 function handleClick(e) {
 
