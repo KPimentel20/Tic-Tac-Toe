@@ -2,10 +2,29 @@
     box-sizing: border-box;
 }
 
+.x::after {
+    content: 'X';
+}
+
+.o::after {
+    content: 'O';
+}
+
 html, body{
     height: 100vh;
     font-family: 'Franklin Gothic Medium';
     background-color: #de9ae8;
+    margin: 0;
+}
+#board {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(3,auto);
 }
 
 #game {
@@ -17,12 +36,30 @@ html, body{
     grid-template-columns: repeat(3, auto);
 }
 
-#box {
+.box {
     border: 1px solid #000;
     width: 50px;
     height: 50px;
     cursor: pointer;
 }
+
+/* //remove borders// */
+.box:nth-child(1), .box:nth-child(2), .box:nth-child(3){
+    border-top: none;
+}
+
+.box:nth-child(1), .box:nth-child(4), .box:nth-child(7){
+    border-left: none;
+}
+
+.box:nth-child(3), .box:nth-child(6), .box:nth-child(9){
+    border-right: none;
+}
+
+.box:nth-child(7), .box:nth-child(8), .box:nth-child(9){
+    border-bottom: none;
+}
+
 
 #gameOver {
     display: none;
@@ -32,6 +69,9 @@ html, body{
     transform: translate(-50%, -50%);
     box-shadow: rgb(0 0 0 / 50%) 0 0 0 9999px;
 }
+
+/* #winnersMessage {
+} */
 
 .GAMEOVER {
     position: absolute;
