@@ -2,14 +2,6 @@
     box-sizing: border-box;
 }
 
-.x::after {
-    content: 'X';
-}
-
-.o::after {
-    content: 'O';
-}
-
 html, body{
     height: 100vh;
     font-family: 'Franklin Gothic Medium';
