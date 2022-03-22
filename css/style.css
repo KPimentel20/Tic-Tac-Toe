@@ -65,20 +65,6 @@ html, body{
 /* #winnersMessage {
 } */
 
-.GAMEOVER {
-    position: absolute;
-    top: -200px;
-    font-size: 60px;
-    font-family: sans-serif;
-    font-weight: bold;
-    text-align: center;
-    transform: translateX(-30%);
-}
-
-.visible {
-    display: block;
-}
-
 button {
     margin-top: 3px;
     padding: 3px;
