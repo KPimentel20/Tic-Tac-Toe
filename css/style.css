@@ -53,15 +53,6 @@ html, body{
 }
 
 
-#gameOver {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: rgb(0 0 0 / 50%) 0 0 0 9999px;
-}
-
 /* #winnersMessage {
 } */
 
