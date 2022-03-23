@@ -6,10 +6,12 @@
 // Player one (objects with key value pairs: the keys (“icons”))//
 // Player two//
 
-let player1 = 'bunnyicon';
-let player2 = 'thirdeyeicon';
+let player1 = 'B';
+let player2 = 'T';
 let game = true;
-let draw = true || false;
+let draw = false;
+let winner = null;
+let whosTurnIsIt;
 
 const start = {
     '1': {
@@ -42,24 +44,37 @@ const winnerPattern = [
 ];
 
 // setup event listeners//
-const begin = document.getElementById('start')
+const rematchButton = document.getElementById('PLAY AGAIN');
+const winnersMessage = document.getElementById('winnersMessage');
+let whosTurnMessageEl = document.getElementById("whosturnisit");
 let gameEl = document.getElementById("1").addEventListener('click', handleClick);
-let tableEl = document.querySelector('table').addEventListener('click', handleMove);
+// let tableEl = document.querySelector('table').addEventListener('click', handleMove);
+
+let cellEls = document.querySelectorAll('td')
+
+cellEls.forEach((cell) => {
+    cell.addEventListener('click', handleMove);
+});
+
 // let buttonEl = document.querySelector('button').addEventListener('click',);
 
 
 /*----- functions -----*/
 // initialize to make the game your viewpoint at the beginning//
-// function initliaze()
+// whos turn is it is set initially to player 1//
+
+function init() {
+    whosTurnIsIt = player1
+    whosTurnMessageEl.innerHTML = `It is ${whosTurnIsIt}'s turn`
+}
+
+init();
 
 // Initializing the state variables:
 // Grid, the players, their icons, replay//
 // Upon loading, the winner variable should be initialized to null//
 // Who’s turn is it variable => randomize it//
 // Render (view) winner = null//
-
-// whos turn is it is set initially to player 1//
-let whosTurnIsIt = player1
 
 //wants me to add boolean to this//
 // Updating the status of who’s turn it is//
@@ -75,45 +90,52 @@ function alternateTurns(){
 //call/invoke alternateTurns when a player places an icon//
 //click function for getting to click inside cells/table//
 function handleClick(e) {
-
     console.log('handleClickInvoked')
 }
-
+//we added an event and targeted where the event takes place (cell that was clicked on) to update the innerHTML//
 //move function for placing your constraints in cells/table//
 function handleMove(e) {
     alternateTurns();
+    whosTurnMessageEl.innerHTML = `It is ${whosTurnIsIt}'s turn`
+    if (whosTurnIsIt === player1) {
+        e.target.innerHTML = player2
+    } else if (whosTurnIsIt === player2) {
+        e.target.innerHTML = player1
+    }
     console.log('handleMoveInvoked')
 }
 
+//need to assign values to the variables || check the innerHTML of all the cells//
 //its a tie//
-// function tie(draw) {
-//     if (draw) {
-//         winnersMessageElement.innerText = "It's a tie!"
-//     } else {
-//         //${} is a string interpulation//
-//         // winnersMessageElement.innerText = `player ${}` wins!
-//     } winnersMessage.classList.add('show')
-// }
-
-//who won//
-function checkWin(Winner) {
-if (rowTotal == 0 || columnTotal == 0 || rowTotal == 3 || columnTotal == 3) {
-    return true;
-} else if (rowTotal == 0 || columnTotal == 0 || rowTotal != 3 || columnTotal != 3) {
-    return false;
-}
+function tie() {
+    if (player1Total === player2Total)
+    tie = true;
+    console.log('Its a tie!')
 }
 
+
+//check the innerhtml of each cell to help us determine a winner bc each cellEl has a value or its null and comparing it to the array//
 // Render a winner message if there is a winner//
-const winnersMessage = document.getElementById('winnersMessage')
+//who won//
+function checkWin() {
+if (rowTotal === 3 || columnTotal === 3 || diagnolTotal === 3) {
+    winner = player1
+    console.log('You lost')
+} else if (rowTotal !== 3 || columnTotal !== 3 || diagnolTotal !== 3) {
+    tie = true;
+    console.log('You lost')
+}
+}
+
+ //how you are going to check the value/innerHTML of each cellEl
+
 
 //rematch/restart the game//
+
 // Handle player clicking on the replay button//
-const rematchButton = document.getElementById('PLAY AGAIN')
+
 
 // When the game is over//
 // function gameOver()
 
 // Invoke main render function://
-// When you are resetting the game (re-initialize state variables)//
-// Render those variables to the page//
