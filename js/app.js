@@ -12,6 +12,8 @@ let game = true;
 let draw = false;
 let winner = null;
 let whosTurnIsIt;
+let player1Total;
+let rowTotal 
 
 const start = {
     '1': {
@@ -46,6 +48,7 @@ const winnerPattern = [
 // setup event listeners//
 const rematchButton = document.getElementById('PLAY AGAIN');
 const winnersMessage = document.getElementById('winnersMessage');
+// const TieMessage = document.getElementById('');
 let whosTurnMessageEl = document.getElementById("whosturnisit");
 let gameEl = document.getElementById("1").addEventListener('click', handleClick);
 // let tableEl = document.querySelector('table').addEventListener('click', handleMove);
@@ -108,9 +111,11 @@ function handleMove(e) {
 //need to assign values to the variables || check the innerHTML of all the cells//
 //its a tie//
 function tie() {
-    if (player1Total === player2Total)
+    if (player1Row + player1Column === 3 + player1Diagonal === 3) &&
+    (player2Row === 3 + player2Column === 3 + player2Diagonal === 3) {
     tie = true;
     console.log('Its a tie!')
+    }
 }
 
 
@@ -118,14 +123,15 @@ function tie() {
 // Render a winner message if there is a winner//
 //who won//
 function checkWin() {
-if (rowTotal === 3 || columnTotal === 3 || diagnolTotal === 3) {
+if (player1Row === 3 || player1Column === 3 || player1Diagonal === 3) {
     winner = player1
-    console.log('You lost')
-} else if (rowTotal !== 3 || columnTotal !== 3 || diagnolTotal !== 3) {
-    tie = true;
+    console.log('Congrats! You won!')
+} else if (player1Row !== 3 || player1Column !== 3 || player1Diagonal !== 3) {
+    winner = player2
     console.log('You lost')
 }
 }
+
 
  //how you are going to check the value/innerHTML of each cellEl
 
