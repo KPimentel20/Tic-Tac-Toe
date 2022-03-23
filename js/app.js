@@ -5,15 +5,15 @@
 // Required constraints:
 // Player one (objects with key value pairs: the keys (“icons”))//
 // Player two//
-
+//let is what can change + const is what can NOT change//
 let player1 = 'B';
 let player2 = 'T';
-let game = true;
-let draw = false;
-let winner = null;
+let board; // array of 9 elements 
+let draw;
+let winner;
 let whosTurnIsIt;
-let player1Total;
-let rowTotal 
+
+
 
 const start = {
     '1': {
@@ -47,11 +47,8 @@ const winnerPattern = [
 
 // setup event listeners//
 const rematchButton = document.getElementById('PLAY AGAIN');
-const winnersMessage = document.getElementById('winnersMessage');
-// const TieMessage = document.getElementById('');
-let whosTurnMessageEl = document.getElementById("whosturnisit");
-let gameEl = document.getElementById("1").addEventListener('click', handleClick);
-// let tableEl = document.querySelector('table').addEventListener('click', handleMove);
+const messageEl = document.getElementById('winnersMessage');
+const boardEl = document.getElementById("1").addEventListener('click', handleClick);
 
 let cellEls = document.querySelectorAll('td')
 
@@ -66,12 +63,14 @@ cellEls.forEach((cell) => {
 // initialize to make the game your viewpoint at the beginning//
 // whos turn is it is set initially to player 1//
 
-function init() {
-    whosTurnIsIt = player1
-    whosTurnMessageEl.innerHTML = `It is ${whosTurnIsIt}'s turn`
-}
-
 init();
+
+function init(){
+    board = ['null','null','null','null','null','null','null','null','null']
+    whosTurnIsIt = true;
+    winner = null;
+    render();
+}
 
 // Initializing the state variables:
 // Grid, the players, their icons, replay//
@@ -110,29 +109,35 @@ function handleMove(e) {
 
 //need to assign values to the variables || check the innerHTML of all the cells//
 //its a tie//
-function tie() {
-    if (player1Row + player1Column === 3 + player1Diagonal === 3) &&
-    (player2Row === 3 + player2Column === 3 + player2Diagonal === 3) {
-    tie = true;
-    console.log('Its a tie!')
-    }
-}
+// function tie() {
+//     if (player1Row === 3 + player1Column === 3 + player1Diagonal === 3) 
+//     (player2Row === 3 + player2Column === 3 + player2Diagonal === 3) {
+//     tie = true;
+//     console.log('Its a tie!')
+//     }
+// }
 
 
 //check the innerhtml of each cell to help us determine a winner bc each cellEl has a value or its null and comparing it to the array//
 // Render a winner message if there is a winner//
 //who won//
-function checkWin() {
-if (player1Row === 3 || player1Column === 3 || player1Diagonal === 3) {
-    winner = player1
-    console.log('Congrats! You won!')
-} else if (player1Row !== 3 || player1Column !== 3 || player1Diagonal !== 3) {
-    winner = player2
-    console.log('You lost')
-}
-}
-
-
+// function checkWin() {
+// if (player1Row === 3 || player1Column === 3 || player1Diagonal === 3) {
+//     winner = player1
+//     console.log('Congrats! You won!')
+// } else if (player1Row !== 3 || player1Column !== 3 || player1Diagonal !== 3) {
+//     tie = true;
+//     console.log('You lost')
+// }
+// }
+// function checkWin(){
+//     for (let pattern of winnerPattern) {
+//         if (Math.abs(game[pattern[1]] + game[pattern[2]] + game[pattern[3]] === 3) {
+//             winner = player1
+//         }
+//     }
+// }
+        
  //how you are going to check the value/innerHTML of each cellEl
 
 
