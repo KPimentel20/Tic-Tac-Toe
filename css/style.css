@@ -2,46 +2,34 @@
     box-sizing: border-box;
 }
 
-html, body{
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
     height: 100vh;
     font-family: 'Franklin Gothic Medium';
     background-color: #de9ae8;
-    margin: 0;
+    justify-content: center;
+    align-content: center;
 }
-#board {
+
+section {
+    display: grid;
     height: 100vh;
     width: 100vw;
-    display: grid;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    justify-items: center;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
 }
 
+section > div {
+    border: 2.5px solid #000; 
+  }
 
-/* HTML table to go along with css grid (styling)//
+/* 
 Give classes to each row and column (obtain the class of which column and which row was clicked on when a player clicks on a cell)//
 
-
-#game {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: grid;
-    grid-template-columns: repeat(3, auto);
-}
-
-.box {
-    border: 1px solid #000;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-}
-
 /* //remove borders// */
-.box:nth-child(1), .box:nth-child(2), .box:nth-child(3){
+/* .box:nth-child(1), .box:nth-child(2), .box:nth-child(3){
     border-top: none;
 }
 
@@ -55,7 +43,7 @@ Give classes to each row and column (obtain the class of which column and which 
 
 .box:nth-child(7), .box:nth-child(8), .box:nth-child(9){
     border-bottom: none;
-}
+} */ 
 
 
 /* #winnersMessage {
@@ -64,6 +52,7 @@ Give classes to each row and column (obtain the class of which column and which 
 button {
     margin-top: 3px;
     padding: 3px;
+    align-items: center;
     background-color:black;
     color: white;
     border-radius: 5px;

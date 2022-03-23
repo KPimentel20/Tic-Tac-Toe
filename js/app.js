@@ -13,18 +13,11 @@ let draw;
 let winner;
 let whosTurnIsIt;
 
-
-
-const start = {
-    '1': {
-        name: 'player1',
-        score: 0
-    },
-    '-1': {
-        name: 'player2',
-        score: 0
+const turns = {
+    '1': 'blue',
+    '-1': 'red',
+    'null': 'white'
     }
-};
 
 // Elements to access more than once in JS://
 // Cells of the grid of the gameboard//
@@ -45,19 +38,14 @@ const winnerPattern = [
     [3,5,7],
 ];
 
-// setup event listeners//
+//cached listeners// --> cache means the computer remembers
+const cellEls = Array.from(document.querySelectorAll('section > div'));
 const rematchButton = document.getElementById('PLAY AGAIN');
 const messageEl = document.getElementById('winnersMessage');
-const boardEl = document.getElementById("1").addEventListener('click', handleClick);
 
-let cellEls = document.querySelectorAll('td')
-
-cellEls.forEach((cell) => {
-    cell.addEventListener('click', handleMove);
-});
-
-// let buttonEl = document.querySelector('button').addEventListener('click',);
-
+//setup event listeners//
+rematchButton.addEventListener('click', init);
+document.querySelector('section').addEventListener('click', handleMove);
 
 /*----- functions -----*/
 // initialize to make the game your viewpoint at the beginning//
@@ -72,81 +60,20 @@ function init(){
     render();
 }
 
-// Initializing the state variables:
-// Grid, the players, their icons, replay//
-// Upon loading, the winner variable should be initialized to null//
-// Who’s turn is it variable => randomize it//
-// Render (view) winner = null//
-
-//wants me to add boolean to this//
-// Updating the status of who’s turn it is//
-//reason why theres no parameters is bc argument happens inside code block + there is no argument//
-function alternateTurns(){
-    if (whosTurnIsIt === player1) {
-        whosTurnIsIt = player2
-    } else if (whosTurnIsIt === player2) {
-        whosTurnIsIt = player1
-    }
-    };
-
-//call/invoke alternateTurns when a player places an icon//
-//click function for getting to click inside cells/table//
-function handleClick(e) {
-    console.log('handleClickInvoked')
+function render(){
+    cellEls.forEach((el, idx) => {
+        el.style.backgroundColor = turns[board[idx]];
+    })
 }
 //we added an event and targeted where the event takes place (cell that was clicked on) to update the innerHTML//
 //move function for placing your constraints in cells/table//
+
 function handleMove(e) {
-    alternateTurns();
-    whosTurnMessageEl.innerHTML = `It is ${whosTurnIsIt}'s turn`
-    if (whosTurnIsIt === player1) {
-        e.target.innerHTML = player2
-    } else if (whosTurnIsIt === player2) {
-        e.target.innerHTML = player1
-    }
-    console.log('handleMoveInvoked')
+    const idx = cellEls.indexOf(e.target);
+    if (idx === 1 || winner) return;
+    board[idx] = whosTurnIsIt;
+    // winner = getWinner();
+    whosTurnIsIt *= -1;
+    console.log(e)
+    render();
 }
-
-//need to assign values to the variables || check the innerHTML of all the cells//
-//its a tie//
-// function tie() {
-//     if (player1Row === 3 + player1Column === 3 + player1Diagonal === 3) 
-//     (player2Row === 3 + player2Column === 3 + player2Diagonal === 3) {
-//     tie = true;
-//     console.log('Its a tie!')
-//     }
-// }
-
-
-//check the innerhtml of each cell to help us determine a winner bc each cellEl has a value or its null and comparing it to the array//
-// Render a winner message if there is a winner//
-//who won//
-// function checkWin() {
-// if (player1Row === 3 || player1Column === 3 || player1Diagonal === 3) {
-//     winner = player1
-//     console.log('Congrats! You won!')
-// } else if (player1Row !== 3 || player1Column !== 3 || player1Diagonal !== 3) {
-//     tie = true;
-//     console.log('You lost')
-// }
-// }
-// function checkWin(){
-//     for (let pattern of winnerPattern) {
-//         if (Math.abs(game[pattern[1]] + game[pattern[2]] + game[pattern[3]] === 3) {
-//             winner = player1
-//         }
-//     }
-// }
-        
- //how you are going to check the value/innerHTML of each cellEl
-
-
-//rematch/restart the game//
-
-// Handle player clicking on the replay button//
-
-
-// When the game is over//
-// function gameOver()
-
-// Invoke main render function://
