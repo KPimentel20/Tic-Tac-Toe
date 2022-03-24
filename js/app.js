@@ -26,16 +26,16 @@ const turns = {
 
 const winnerPattern = [
     //rows//
-    [1,2,3],
-    [4,5,6],
-    [7,8,9],
+    [0,1,2],
+    [3,4,5],
+    [6,7,8],
     //columns//
-    [2,5,8],
+    [0,3,6],
     [1,4,7],
-    [3,6,9],
+    [2,5,8],
     //diagonal//
-    [1,5,9],
-    [3,5,7],
+    [0,4,8],
+    [2,4,6],
 ];
 
 //cached listeners// --> cache means the computer remembers
@@ -54,26 +54,37 @@ document.querySelector('section').addEventListener('click', handleMove);
 init();
 
 function init(){
-    board = ['null','null','null','null','null','null','null','null','null']
-    whosTurnIsIt = true;
+    board = [null, null, null, null, null, null, null, null, null]
+    whosTurnIsIt = 1;
     winner = null;
     render();
 }
 
-function render(){
-    cellEls.forEach((el, idx) => {
-        el.style.backgroundColor = turns[board[idx]];
-    })
-}
 //we added an event and targeted where the event takes place (cell that was clicked on) to update the innerHTML//
 //move function for placing your constraints in cells/table//
 
 function handleMove(e) {
     const idx = cellEls.indexOf(e.target);
-    if (idx === 1 || winner) return;
+    if (winner || board[idx]) return;
     board[idx] = whosTurnIsIt;
-    // winner = getWinner();
+    winner = checkWin();
     whosTurnIsIt *= -1;
-    console.log(e)
     render();
 }
+
+function checkWin(){
+    for(let pattern of winnerPattern){
+        if (Math.abs(board[pattern[0]] + board[pattern[1]] + board[pattern[2]]) === 3)
+        return whosTurnIsIt;
+    } 
+    return board.includes(null) ? null : 'draw';
+    }
+
+function render() {
+    cellEls.forEach((el,idx) => {
+    el.style.backgroundColor = turns[board[idx]];
+    });
+    //return a message//
+    rematchButton.style.visibility = winner ? 'visible' : 'hidden';
+}
+

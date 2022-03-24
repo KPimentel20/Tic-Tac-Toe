@@ -25,6 +25,9 @@ section > div {
     border: 2.5px solid #000; 
   }
 
+#playagain{
+    align-items: center;
+}
 /* 
 Give classes to each row and column (obtain the class of which column and which row was clicked on when a player clicks on a cell)//
 
