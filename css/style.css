@@ -22,7 +22,11 @@ section {
 }
 
 section > div {
-    border: 2.5px solid #000; 
+    border: 1px solid #000; 
+    /* // size of the gap between rows on the grid // */
+    row-gap: 1vmin; 
+    /* // size of the gap between columns on the grid // */
+    column-gap: 1vmin;
   }
 
 #playagain{
@@ -32,21 +36,18 @@ section > div {
 Give classes to each row and column (obtain the class of which column and which row was clicked on when a player clicks on a cell)//
 
 /* //remove borders// */
-/* .box:nth-child(1), .box:nth-child(2), .box:nth-child(3){
+.box:nth-child(0), .box:nth-child(1), .box:nth-child(2){
     border-top: none;
 }
 
-.box:nth-child(1), .box:nth-child(4), .box:nth-child(7){
+.box:nth-child(2), .box:nth-child(3), .box:nth-child(4){
     border-left: none;
-}
-
-.box:nth-child(3), .box:nth-child(6), .box:nth-child(9){
     border-right: none;
 }
 
-.box:nth-child(7), .box:nth-child(8), .box:nth-child(9){
+.box:nth-child(5), .box:nth-child(6), .box:nth-child(7){
     border-bottom: none;
-} */ 
+} 
 
 
 /* #winnersMessage {
