@@ -84,7 +84,11 @@ function handleMove(e) {
 function checkWin(){
     for(let pattern of winnerPattern){
         if (Math.abs(board[pattern[0]] + board[pattern[1]] + board[pattern[2]]) === 3)
-        return whosTurnIsIt;
+        return whosTurnIsIt
+        //documentgetelementby id (winner)
+        //
+        // return winner = ()
+        // messageEl.textContent = 'Congrats you win!';
     } 
     return board.includes(null) ? null : 'draw';
     }
@@ -95,7 +99,29 @@ function render() {
     cellEls.forEach((el,idx) => {
     el.style.backgroundColor = turns[board[idx]];
     });
-    //return a message//
+    renderMsg();
     rematchButton.style.visibility = winner ? 'visible' : 'hidden';
 }
+
+function renderMsg(){
+    console.log(winner)
+    //if we have a winner render winnersmessage
+    //who is the winner
+    //what message to display
+let messagestatus = document.getElementsByClassName('winner')
+    console.log(messagestatus[0])
+    if (winner == 1){messagestatus[0].innerText = 'Congrats player1! You won!'
+    messagestatus[0].classList.remove('hidewinningmessage')
+        //if winner equals 1 return player1//
+    } else if (winner == -1){messagestatus[0].innerText = 'Congrats player2! You won!'
+    messagestatus[0].classList.remove('hidewinningmessage')
+     //player2 wins//
+    } else {
+        return 
+    }
+}
+
+
+//render game over//
+//render the icons//
 
