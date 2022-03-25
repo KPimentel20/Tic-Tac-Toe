@@ -7,6 +7,8 @@ text-align: center;
 color: #de9ae8;
 }
 
+/* Give classes to each row and column (obtain the class of which column and which row was clicked on when a player clicks on a cell)// */
+
 #Congrats{
     text-align: center;
 }
@@ -18,7 +20,7 @@ body {
     height: 100vh;
     font-family: 'Franklin Gothic Medium';
     background-color: #de9ae8;
-    background-image: url("https://i.imgur.com/VMA1PGl.jpg");
+    background-image: url("https://i.imgur.com/nN2DzdH.png");
     background-attachment: fixed;
     justify-content: center;
     align-content: center;
@@ -27,11 +29,10 @@ body {
 section {
     display: grid;
     margin: 0 auto;
-    height: 500px;
-    width: 300px;
+    height: 350px;
+    width: 350px;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
-    /* opacity: 3%; */
 }
 
 .winner{
@@ -57,10 +58,6 @@ section > div {
     background-size: cover;
   }
 
-
-/* 
-Give classes to each row and column (obtain the class of which column and which row was clicked on when a player clicks on a cell)//
-
 /* //remove borders// */
 .box:nth-child(1), .box:nth-child(2), .box:nth-child(3){
     border-top: none;
@@ -78,9 +75,6 @@ Give classes to each row and column (obtain the class of which column and which 
     border-bottom: none;
 } 
 
-
-/* #winnersMessage {
-} */
 .gameOver{
     margin: 0 auto;
 }
