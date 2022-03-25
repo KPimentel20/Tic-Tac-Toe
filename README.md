@@ -28,7 +28,7 @@ Then, I began experimenting with other backgrounds that actually center the icon
 
 <img width="1436" alt="Screen Shot 2022-03-25 at 11 26 43 AM" src="https://user-images.githubusercontent.com/101133073/160152264-df75be99-a177-45cf-b934-e66666d32029.png">
 
-Nothing felt right until I got to this image.
+Nothing felt right until I got to this image. He brings this truck every concert to pay homage to his father who drove trucks for a living.
 <img width="1355" alt="Screen Shot 2022-03-25 at 11 32 57 AM" src="https://user-images.githubusercontent.com/101133073/160152296-75e7ee8f-f894-402f-80fd-88264c9387b4.png">
 
 I kept going back and forth between that one and the initial background.
