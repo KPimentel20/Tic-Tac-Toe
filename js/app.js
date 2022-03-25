@@ -85,10 +85,6 @@ function checkWin(){
     for(let pattern of winnerPattern){
         if (Math.abs(board[pattern[0]] + board[pattern[1]] + board[pattern[2]]) === 3)
         return whosTurnIsIt
-        //documentgetelementby id (winner)
-        //
-        // return winner = ()
-        // messageEl.textContent = 'Congrats you win!';
     } 
     return board.includes(null) ? null : 'draw';
 }
@@ -105,17 +101,17 @@ function render() {
 
 function renderMsg(){
     console.log(winner)
-    //if we have a winner render winnersmessage
-    //who is the winner
-    //what message to display
+    //Rendering our winnersmessage
+    //This will tell us who is the winner
+    //What message to display
 let messagestatus = document.getElementsByClassName('winner')
     console.log(messagestatus[0])
-    if (winner == 1){messagestatus[0].innerText = 'Congrats player1! You won!'
+    if (winner == true){messagestatus[0].innerText = 'Congrats player1! You won!'
     messagestatus[0].classList.remove('hidewinningmessage')
-        //if winner equals 1 return player1//
-    } else if (winner == -1){messagestatus[0].innerText = 'Congrats player2! You won!'
+        //If winner equals true return player1//
+    } else if (winner == false){messagestatus[0].innerText = 'Congrats player2! You won!'
     messagestatus[0].classList.remove('hidewinningmessage')
-     //player2 wins//
+     //If the winner eqauls false return player2//
     } else {
         return 
     }
