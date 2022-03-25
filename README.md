@@ -32,12 +32,14 @@ Nothing felt right until I got to this image. He brings this truck prop out at t
 <img width="1355" alt="Screen Shot 2022-03-25 at 11 32 57 AM" src="https://user-images.githubusercontent.com/101133073/160152296-75e7ee8f-f894-402f-80fd-88264c9387b4.png">
 
 I kept going back and forth between that one and the initial background.
-<img width="1113" alt="Screen Shot 2022-03-25 at 11 10 44 AM" src="https://user-images.githubusercontent.com/101133073/160149695-8226ce4c-47ad-4228-84e3-b636b023c500.png">
-
 <img width="698" alt="Screen Shot 2022-03-25 at 11 10 58 AM" src="https://user-images.githubusercontent.com/101133073/160149721-8e66a71b-c1f1-4236-ac40-1570517e09e6.png">
 
 Finally, I decided to go with this image, and it also works well with the icons on my grid!
+It also displays a winner's message.
 <img width="1364" alt="Screen Shot 2022-03-25 at 11 37 05 AM" src="https://user-images.githubusercontent.com/101133073/160152890-f1ecc3a1-99a0-4943-b409-5f6c452f9f8c.png">
+
+Where there is a tie, you can just rematch.
+<img width="1365" alt="Screen Shot 2022-03-25 at 1 06 03 PM" src="https://user-images.githubusercontent.com/101133073/160168190-971577a7-817d-404b-8b72-74291f24914e.png">
 
 I will continue working on this game, on its functionality, and its visuals. For now, I'm pretty damn proud of how far I've come with it! Thanks for all of your help!
 
