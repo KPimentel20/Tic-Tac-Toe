@@ -100,12 +100,10 @@ function render() {
 }
 
 function renderMsg(){
-    console.log(winner)
     //Rendering our winnersmessage
     //This will tell us who is the winner
     //What message to display
 let messagestatus = document.getElementsByClassName('winner')
-    console.log(messagestatus[0])
     if (winner == true){messagestatus[0].innerText = 'Congrats player1! You won!'
     messagestatus[0].classList.remove('hidewinningmessage')
         //If winner equals true return player1//
