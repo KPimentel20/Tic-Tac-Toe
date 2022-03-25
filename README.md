@@ -13,16 +13,16 @@ This is the color I chose for my text.
 
 <img width="59" alt="Screen Shot 2022-03-21 at 7 06 22 PM" src="https://user-images.githubusercontent.com/101133073/160149739-0ebcfc28-1f5c-4cd8-9121-6d9a969e2062.png">
 
-I chose the iconic third eye and bunny logo's for my 'X' and 'O'.
-
-![7043C517-5D72-4F45-A6B3-4D0F720A943C_4_5005_c](https://user-images.githubusercontent.com/101133073/160149784-61a7a5c2-c5bf-4778-97d6-b7745340714f.jpeg)
+I chose his iconic bunny and third eye logo's for my 'X' and 'O'.
 
 ![4F90EA1E-8C32-49C2-9088-D0A4CEB52F82_4_5005_c](https://user-images.githubusercontent.com/101133073/160149820-8a407d6b-0e86-4873-8602-e7d27d9d458e.jpeg)
 
-At first, I wanted a background to represent Bad Bunny's unworldly asthetic. 
+![7043C517-5D72-4F45-A6B3-4D0F720A943C_4_5005_c](https://user-images.githubusercontent.com/101133073/160149784-61a7a5c2-c5bf-4778-97d6-b7745340714f.jpeg)
+
+At first, I wanted a background to represent Bad Bunny's unworldly aesthetic. 
 ![7A71F159-E10E-4932-8931-87834B6859CD](https://user-images.githubusercontent.com/101133073/160149905-0feb02a7-4223-4a92-97c0-a9acb99d6504.jpeg)
 
-Then, I began experimenting with other backgrounds that actually center the iconic Reggaeton artist. 
+Then, I began experimenting with other backgrounds that actually center the iconic Perreo artist. 
 
 <img width="1429" alt="Screen Shot 2022-03-25 at 11 27 29 AM" src="https://user-images.githubusercontent.com/101133073/160152234-76351b44-8702-46c7-8a73-6c192c0c2588.png">
 
