@@ -106,8 +106,9 @@ function renderMsg(){
 let messagestatus = document.getElementsByClassName('winner')
     if (winner == true){messagestatus[0].innerText = 'Congrats player1! You won!'
     messagestatus[0].classList.remove('hidewinningmessage')
-        //If winner equals true return player1//
+    //If winner equals true return player1//
     } else if (winner == false){messagestatus[0].innerText = 'Congrats player2! You won!'
+    console.log(messagestatus[0])
     messagestatus[0].classList.remove('hidewinningmessage')
      //If the winner eqauls false return player2//
     } else {
