@@ -2,6 +2,10 @@
 Project1
 <title>BAD BUNNY THEMED TIC-TAC-TOE</title>
 
+Why this project?
+
+I'm a huge Bad Bunny fan! Also, although # Tic-Tac-Toe is just about the most basic game, it's actually really hard to beat, low-key. It brings me back to my elementary days which was really fun to play around with. 
+
 Screenshot(s):
 <img width="59" alt="Screen Shot 2022-03-21 at 7 06 22 PM" src="https://user-images.githubusercontent.com/101133073/160149739-0ebcfc28-1f5c-4cd8-9121-6d9a969e2062.png">
 
