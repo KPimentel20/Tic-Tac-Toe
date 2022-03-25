@@ -45,6 +45,8 @@ I will continue working on this game, on its functionality, and its visuals. For
 
 Technologies Used: HTML, CSS, and JavaScript
 
+Next Steps: Adding an audio file, and re-sizing my bunny icon.
+
 Getting Started: https://github.com/KPimentel20/Tic-Tac-Toe.git
 
 Website: https://kpimentel20.github.io/Tic-Tac-Toe/
