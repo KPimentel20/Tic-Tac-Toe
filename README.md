@@ -26,4 +26,5 @@ Screenshot(s):
 Technologies Used: HTML, CSS, and JavaScript
 
 Getting Started: https://github.com/KPimentel20/Tic-Tac-Toe.git
-https://kpimentel20.github.io/Tic-Tac-Toe/
+
+Website: https://kpimentel20.github.io/Tic-Tac-Toe/
