@@ -2,9 +2,15 @@
     box-sizing: border-box;
 }
 
-h1{
+h1 {
 text-align: center;
+color: #de9ae8;
 }
+
+#Congrats{
+    text-align: center;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -12,21 +18,30 @@ body {
     height: 100vh;
     font-family: 'Franklin Gothic Medium';
     background-color: #de9ae8;
+    background-image: url("https://i.imgur.com/VMA1PGl.jpg");
+    background-attachment: fixed;
     justify-content: center;
     align-content: center;
 }
 
 section {
     display: grid;
-    height: 100vh;
-    width: 100vw;
+    margin: 0 auto;
+    height: 500px;
+    width: 300px;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(3, auto);
+    /* opacity: 3%; */
 }
 
 .winner{
     height: 100px;
     width: 100px;
+    color: #de9ae8;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .hidewinningmessage{
@@ -34,41 +49,47 @@ section {
 }
 
 section > div {
-    border: 1px solid #000; 
+    border: 1px solid white; 
     /* // size of the gap between rows on the grid // */
     row-gap: 1vmin; 
     /* // size of the gap between columns on the grid // */
     column-gap: 1vmin;
+    background-size: cover;
   }
 
-#playagain{
-    align-items: center;
-}
+
 /* 
 Give classes to each row and column (obtain the class of which column and which row was clicked on when a player clicks on a cell)//
 
 /* //remove borders// */
-/* .box:nth-child(0), .box:nth-child(1), .box:nth-child(2){
+.box:nth-child(1), .box:nth-child(2), .box:nth-child(3){
     border-top: none;
 }
 
-.box:nth-child(2), .box:nth-child(3), .box:nth-child(4){
+.box:nth-child(1), .box:nth-child(4), .box:nth-child(7){
     border-left: none;
+}
+
+.box:nth-child(3), .box:nth-child(6), .box:nth-child(9){    
     border-right: none;
 }
 
-.box:nth-child(5), .box:nth-child(6), .box:nth-child(7){
+.box:nth-child(7), .box:nth-child(8), .box:nth-child(9){
     border-bottom: none;
-}  */
+} 
 
 
 /* #winnersMessage {
 } */
+.gameOver{
+    margin: 0 auto;
+}
 
 button {
     margin-top: 3px;
     padding: 3px;
     align-items: center;
+    text-align: center;
     background-color:black;
     color: white;
     border-radius: 5px;
@@ -78,4 +99,7 @@ button {
 button:hover{
     background-color:white;
     color: black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
 }

@@ -16,9 +16,9 @@ let whosTurnIsIt;
 //player2 is red//
 //any box/space/square/cell that has yet to be clicked into will remain white(null)//
 const turns = {
-    '1': 'blue',
-    '-1': 'red',
-    'null': 'white'
+    true: "url('https://i.imgur.com/Yy0x9uY.jpg')",
+    false: "url('https://i.imgur.com/FaQsC39.jpg')",
+    'null': ''
 }
 
 // Elements to access more than once in JS://
@@ -59,7 +59,7 @@ init();
 //we have declared and initialized everything inside our array as null until players click into the game and begin//
 function init(){
     board = [null, null, null, null, null, null, null, null, null]
-    whosTurnIsIt = 1;
+    whosTurnIsIt = true;
     winner = null;
     render();
 }
@@ -74,7 +74,7 @@ function handleMove(e) {
     if (winner || board[idx]) return;
     board[idx] = whosTurnIsIt;
     winner = checkWin();
-    whosTurnIsIt *= -1;
+    whosTurnIsIt = !whosTurnIsIt;
     render();
 }
 
@@ -97,7 +97,7 @@ function checkWin(){
 //When we have a winner our rematch button will display, otherwise it will remain hidden//
 function render() {
     cellEls.forEach((el,idx) => {
-    el.style.backgroundColor = turns[board[idx]];
+    el.style.backgroundImage = turns[board[idx]];
     });
     renderMsg();
     rematchButton.style.visibility = winner ? 'visible' : 'hidden';
